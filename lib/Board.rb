@@ -2,7 +2,7 @@ class Board
     rows = 3
     cols = 3
     # board = Array.new(rows){Array.new(cols)}
-    board = []
+    @board = []
 
     def init()
         # for i in 0..2
@@ -10,10 +10,11 @@ class Board
         #         board[](i,j) = ' '
         #     end
         # end
-        board = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']]
+        @board = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']]
     end
 
     def mark_cell(x,y,mark)
-        board[y][x] = mark
+        @board[y][x] = mark
+        return @board
     end
 end
