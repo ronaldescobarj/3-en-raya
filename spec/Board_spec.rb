@@ -16,4 +16,10 @@ describe Board do
         test_board = [['X', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']]
         expect(@board.mark_cell(0,0,'X')).to eq test_board
     end
+
+    it "deberia marcar la celda inferior derecha con O" do
+        @board.init()
+        test_board = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', 'O']]
+        expect(@board.mark_cell(2,2,'O')).to eq test_board
+    end
 end
